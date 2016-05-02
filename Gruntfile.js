@@ -59,7 +59,7 @@ module.exports = function(grunt) {
     var args = ["--destination=dist/"];
 
     if (target === 'dev') {
-      args.push('--baseUrl=http://127.0.0.1:1342');
+      args.push('--baseUrl=http://localhost:1345');
       args.push('--buildDrafts=true');
       args.push('--buildFuture=true');
     }
@@ -70,6 +70,13 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', [
+    'clean',
+    'hugo:dev',
+    'sass',
+    'postcss',
+    ]);
+
+  grunt.registerTask('build', [
     'clean',
     'hugo',
     'sass',

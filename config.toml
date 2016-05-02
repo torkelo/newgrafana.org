@@ -2,14 +2,5 @@ baseurl = "http://grafana.org/"
 languageCode = "en-us"
 title = "Grafana"
 
-[[menu.main]]
-    name = "Features"
-    weight = -110
-    identifier = "features"
-    url = "features"
-
-[[menu.main]]
-    name = "Community"
-    weight = -110
-    identifier = "community"
-    url = "/community/"
+[permalinks]
+  blog = "blog/:year/:month/:day/:title.html/"

@@ -1,0 +1,30 @@
+main
+  .page-header
+    .page-header-bg
+    .row
+      .large-12.columns
+        h1 Grafana Blog
+
+  .page-content.row
+    .large-8.columns
+      - blog.articles[0...5].each do |article|
+
+        h2= link_to article.title, article
+        h5.subheader
+          = article.data.published_on
+          '  by
+          = article.data.author
+
+        p
+          = article.summary
+          = link_to "Read More &raquo;", article
+
+        hr
+
+    .large-4.columns
+      = link_to "/feed.xml" do
+        img src="/assets/img/rss-28x28.png" style="float:right"
+      h4 About Grafana
+      p Grafana is an open source metrics dashboard and graph composer for Graphite and InfluxDB
+
+      hr

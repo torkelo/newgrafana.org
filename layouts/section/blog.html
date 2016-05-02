@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<div class="page-section page-section--hero">
+	<div class="wrapper">
+		<h1 class="page-section__headline">Blog</h1>
+	</div>
+</div>
+
+<div class="page-section">
+	<div class="post-list wrapper">
+		{{ range .Data.Pages }}
+		{{ .Render "li"}}
+		{{ end }}
+	</div>
+</div>
+
+{{ partial "footer.html" . }}
