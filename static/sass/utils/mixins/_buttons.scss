@@ -1,0 +1,41 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+
+
+@mixin button {
+  display: inline-block;
+  width: auto;
+  height: rem-calc(40);
+  padding: rem-calc(0 20);
+  border: 1px solid;
+  font-size: $font-size-delta;
+  font-weight: 400;
+  line-height: rem-calc(38); // offset for border widths
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  border-radius: $border-radius;
+}
+
+
+@mixin outline-styles($color1: $primary-color, $color2: $primary-color) {
+    
+    border-color: $color1;
+    background: transparent;
+    color: $color1;
+
+    &:hover {
+      border: 1px solid $color1;
+      -moz-border-image: -moz-linear-gradient(top left, $color1 0%, $color2 100%);
+      -webkit-border-image: -webkit-linear-gradient(top left, $color1 0%, $color2 100%);
+      border-image: linear-gradient(to bottom right, $color1 0%, $color2 100%);
+      border-image-slice: 1;
+      color: tint($color1, 75%);
+    }
+
+}

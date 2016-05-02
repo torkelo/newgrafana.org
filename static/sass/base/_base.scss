@@ -1,0 +1,49 @@
+// =========================================================================
+// BASE
+// =========================================================================
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include pt-sans;
+  @include font-smoothing;
+  background: $dark-gray;
+  color: $medium-gray;
+  line-height: 1.4;
+}
+
+// a,
+// a:visited {
+//   color: $medium-gray;
+// }
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.no-underline {
+  text-decoration: none;
+}

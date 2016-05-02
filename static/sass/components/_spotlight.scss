@@ -1,0 +1,114 @@
+// ==========================================================================
+// SPOTLIGHT
+// ==========================================================================
+
+
+
+$spotlight-body-width: rem-calc(430);
+
+.plugin-spotlight {
+  @include clearfix;
+  margin-bottom: rem-calc(40);
+  padding: rem-calc(40 40 0 40); // was padding-bottom: rem-calc(40);
+  border-radius: 4px;
+  background: linear-gradient(135deg, darken($gray, 15%) 0%, $dark-gray 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+
+  // &::after {
+  //   display: block;
+  //   width: 100%;
+  //   height: 1px;
+  //   background: $orange-gradient;
+  //   content: '';
+  // }
+}
+
+.plugin-spotlight .verified {
+  float: none;
+}
+
+.plugin-spotlight__screenshot {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: rem-calc(1100)) {
+    width: calc(98% - #{$spotlight-body-width});
+    float: left;
+  }
+}
+
+.plugin-spotlight__screenshot > img {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: rem-calc(757);
+  height: auto;
+  float: left;
+  opacity: 0;
+}
+
+.plugin-spotlight--animate .plugin-spotlight__screenshot > img {
+  animation: screenshot-pop 200ms ease-in-out 200ms forwards;
+}
+
+@keyframes screenshot-pop {
+  0% {
+    opacity: 0;
+    transform: translate(0,30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.plugin-spotlight__badge {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: rem-calc(100);
+  height: rem-calc(100);
+  background: url('../../static/img/img_spotlight-badge.png') no-repeat;
+  background-size: cover;
+  opacity: 0;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../../static/img/img_spotlight-badge@2x.png');
+  }
+
+  @include at-least(small) {
+    width: rem-calc(171);
+    height: rem-calc(171);
+  }
+
+  @media (min-width: rem-calc(1100)) {
+    right: 0;
+    left: auto;
+  }
+}
+
+.plugin-spotlight--animate .plugin-spotlight__badge {
+  animation: badge-appear 400ms linear 400ms forwards;
+}
+
+@keyframes badge-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.plugin-spotlight__body {
+  margin-bottom: rem-calc(40);
+
+  @media (min-width: rem-calc(1100)) {
+    width: $spotlight-body-width;
+    margin-bottom: 0;
+    float: left;
+  }
+}

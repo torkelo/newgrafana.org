@@ -1,0 +1,100 @@
+// ==========================================================================
+// VARIABLES
+// ==========================================================================
+
+$border-radius: 2px;
+
+// Colors
+// --------------------------------------------------------------------------
+
+$primary-color: #f7941d;
+$secondary-color: #777;
+$success-color: #3adb76;
+$warning-color: #ffed00;
+$alert-color: #ea2531;
+$light-gray: #a2a2a2;
+$gray: #555;
+$medium-gray: #898989;
+$dark-gray: #262626;
+$darker-gray: #1f1f1f;
+$black: #0a0a0a;
+$white: #fefefe;
+$off-white: #c5c5c5;
+$dark-orange: #f26529;
+$blue: #13b2d4;
+$amethyst: #d077e8;
+$monza: #d6041b;
+
+$color-page-hero-bg: #2e2e2e;
+
+// Gradients
+$orange-gradient: linear-gradient(to right, $warning-color 0%, $dark-orange 75%);
+
+
+
+// Font-size scale (Based on http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/)
+// ---------------------------------------------------------------------------
+
+$font-size-giga:      rem-calc(48);
+$font-size-mega:      rem-calc(36);
+$font-size-kilo:      rem-calc(24);
+$font-size-alpha:     rem-calc(21);
+$font-size-beta:      rem-calc(18);
+$font-size-gamma:     rem-calc(16);
+$font-size-delta:     rem-calc(14);
+$font-size-epsilon:   rem-calc(12);
+$font-size-zeta:      rem-calc(11);
+$font-size-milli:     rem-calc(10);
+
+
+
+// Breakpoints
+// --------------------------------------------------------------------------
+
+$bp-small: rem-calc(650);
+$bp-medium: rem-calc(992);
+$bp-large: rem-calc(1200);
+$bp-xlarge: rem-calc(1900);
+$bp-nav: rem-calc(840); // Breakpoint for .site-nav width (was 950 -- TW)
+
+// Grid
+// --------------------------------------------------------------------------
+
+$grid-breakpoints: (
+        xs : 0,
+        sm : $bp-small,
+        md : $bp-medium,
+        lg : $bp-large
+);
+
+$grid-padding: 1.5rem;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;
+$border-width: 1px !default;
+
+$form-margin: 0.2rem;

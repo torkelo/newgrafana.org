@@ -1,0 +1,206 @@
+.form {
+  margin: 0 auto;
+  @include at-least(small) {
+    max-width: rem-calc(360);
+  }
+}
+
+.form--profile {
+  @include at-least(small) {
+    max-width: rem-calc(760);
+  }
+}
+
+.form-section {
+  margin-bottom: $spacer;
+}
+
+.form-group {
+  margin-bottom: rem-calc(15px);
+  margin-right: rem-calc(15);
+}
+
+.form-group-inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .gf-form-flex {
+    flex-grow: 1;
+  }
+}
+
+.form__label {
+  font-size: rem-calc(13);
+  font-weight: 600;
+  color: $gray;
+  display: block;
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  height: rem-calc(50);
+  margin-bottom: rem-calc(2);
+  border: 1px solid $gray;
+  border-radius: rem-calc(4);
+  background: #555 0.625rem 50% no-repeat;
+  line-height: rem-calc(48); // offset for border
+  vertical-align: top;
+  padding-left: rem-calc(10);
+  color: $white;
+
+  @include at-least(small) {
+    max-width: rem-calc(360);
+    margin-right: rem-calc(10);
+  }
+
+  &.input-size-auto { width: auto; }
+}
+
+.form__input:focus {
+  box-shadow: 0 0 10px $light-gray;
+  border: 1px solid $light-gray;
+  outline-style: none;
+  outline-color: transparent;
+}
+
+.form__input--valid, .form__input--valid:focus {
+  box-shadow: 0 0 10px $success-color;
+  border: 1px solid $success-color;
+  outline-style: none;
+  outline-color: transparent;
+}
+
+.form__input--invalid, .form__input--invalid:focus {
+  box-shadow: 0 0 10px $alert-color;
+  border: 1px solid $alert-color;
+  outline-style: none;
+  outline-color: transparent;
+}
+
+.form__input-error {
+  color: $alert-color;
+  text-align: left;
+  margin-left: rem-calc(5);
+  margin-bottom: rem-calc(5);
+}
+
+.form__input--lowercase {
+  text-transform:lowercase;
+}
+
+.form__input-success {
+  color: $success-color;
+  text-align: left;
+  // margin-left: rem-calc(15);
+  margin-bottom: rem-calc(5);
+}
+
+.form__input-subtext {
+  font-size: rem-calc(13);
+  display: block;
+}
+
+.form-inline-title__sub-copy {
+  font-size: rem-calc(15);
+  color: $white;
+  margin-bottom: rem-calc(15);
+  display: block;
+}
+
+.form__btn {
+  width: 100%;
+  font-weight: 700;
+  margin-top: rem-calc(15);
+
+  @include at-least(small) {
+    width: auto;
+  }
+}
+
+.form-inline-title {
+  font-size: $font-size-gamma;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: $white;
+}
+
+.form-inline-title--margin {
+  margin-bottom: rem-calc(5);
+}
+
+.login-form {
+  text-align:center;
+  margin-bottom: 5rem;
+
+  @include at-least(small) {
+    max-width: rem-calc(400);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.nice-form {
+  label {
+    display: block;
+    cursor: pointer;
+
+    .radio-overlay, .checkbox-overlay {
+      display:inline-block;
+      margin: 5px 5px 0 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      vertical-align: bottom;
+      // box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+      box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px 0px rgba(255, 255, 255, 0.065);
+      background: $darker-gray;
+      outline: none;
+    }
+
+    .checkbox-overlay--black-bg {
+      background: $black;
+    }
+
+    .checkbox-overlay {
+      border-radius: 0;
+    }
+
+    input {
+        display: none;
+    }
+
+    input[type="radio"]:checked + span:before {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: block;
+      content: "";
+      background-position: 0 0;
+      background-image: -webkit-radial-gradient(rgba(247,148,29,1) 0%, rgba(247,148,29,1) 15%, rgba(247,148,29,0.3) 28%, rgba(247,148,29,0) 70% );
+      background-image: -o-radial-gradient(rgba(247,148,29,1) 0%, rgba(247,148,29,1) 15%, rgba(247,148,29,0.3) 28%, rgba(247,148,29,0) 70% );
+      background-image: -moz-radial-gradient(rgba(247,148,29,1) 0%, rgba(247,148,29,1) 15%, rgba(247,148,29,0.3) 28%, rgba(247,148,29,0) 70% );
+      background-image: radial-gradient(rgba(247,148,29,1) 0%, rgba(247,148,29,1) 15%, rgba(247,148,29,0.3) 28%, rgba(247,148,29,0) 70% );
+      background-repeat: no-repeat;
+    }
+
+    input[type="checkbox"]:checked + span:before {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: block;
+      content: "";
+      background-position: 0 0;
+      background-image: url("../../static/img/check.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.email-form__input {
+  background: $gray url('../../static/img/icon_email.svg') rem-calc(10) 50% no-repeat;
+  padding-left: rem-calc(48);
+}

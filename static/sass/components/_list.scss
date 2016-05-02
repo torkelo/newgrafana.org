@@ -1,0 +1,71 @@
+.list {
+  margin: 0 rem-calc(10) 0 0;
+  padding: 0 rem-calc(10) 0 0;
+}
+
+.list__header {
+  margin-right: rem-calc(10);
+  padding-right: rem-calc(10);
+}
+
+.list__row {
+  list-style: none;
+  background: linear-gradient(135deg, darken($gray, 15%) 0%, darken($gray, 16%) 100%);
+  margin-bottom: rem-calc(3);
+  padding: rem-calc(13) rem-calc(20);
+}
+
+.list__row:hover {
+  background: linear-gradient(135deg, darken($gray, 16%) 0%, darken($gray, 17%) 100%);
+}
+
+.list__row:active {
+  background: linear-gradient(135deg, darken($gray, 17%) 0%, darken($gray, 18%) 100%);
+}
+
+.list__row--no-hover {
+  @extend .list__row;
+  &:hover, &:active {
+    background: linear-gradient(135deg, darken($gray, 15%) 0%, darken($gray, 16%) 100%);
+  }
+}
+
+.list__item {
+  flex: 3 9rem;
+  text-align: left;
+  align-self: center;
+}
+
+.list__item--narrow {
+  text-align: left;
+  align-self: center;
+}
+
+.list__itemImage {
+  margin-right: rem-calc(10);
+  flex: 0 0 4rem;
+}
+
+.list__itemName {
+  color: $white;
+  font-weight: bold;
+  font-size: rem-calc(17);
+  margin: 0 rem-calc(10) 0 0;
+}
+
+.list__itemDesc {
+  color: $medium-gray;
+  font-size: rem-calc(14);
+  line-height: rem-calc(18);
+}
+
+.list__itemDate {
+  margin-left: rem-calc(5);
+}
+
+.list__itemContent {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: $white;
+}

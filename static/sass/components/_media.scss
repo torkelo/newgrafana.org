@@ -1,0 +1,77 @@
+// ==========================================================================
+// MEDIA
+// ==========================================================================
+
+
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media__figure {
+  margin-right: 1em;
+}
+
+.media__body {
+  flex: 1;
+}
+
+// For early access signup
+// --------------------------------------------------------------------------
+
+.asteroid-field {
+  @include at-least(medium) {
+    width: rem-calc(400);
+  }
+}
+
+.asteroid {
+    position: relative;
+
+    height: 370px;
+    background: url('../../static/img/claimed_asteroid.svg') no-repeat;
+    background-size: 425px 492px;
+
+    @include at-least(medium) {
+      width: 407px;
+    }
+}
+
+.asteroid-name {
+    display: block;
+    position: absolute;
+    top: 223px;
+    left: 25px;
+    width: 328px;
+    color: $medium-gray;
+    font-weight: 900;
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: skew(6deg,-8.5deg);
+    text-shadow: 0px -1px 1px rgba(255, 255, 255, .2);
+}
+
+.asteroid-reserved {
+    display: block;
+    position: absolute;
+    top: 206px;
+    left: 152px;
+    color: $medium-gray;
+    font-size: rem-calc(12);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    transform: skew(6deg,-8.5deg);
+    text-shadow: 0px -1px 1px rgba(255, 255, 255, .2);
+}
+
+.asteroid-name-long {
+    top: 229px;
+    font-size: 16px;
+}
+
+.asteroid-name-medium {
+    font-size: 20px;
+}

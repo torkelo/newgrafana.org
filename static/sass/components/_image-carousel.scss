@@ -1,0 +1,41 @@
+
+.image-carousel__modal {
+  .ReactModal__Content {
+    width: auto;
+    left: rem-calc(5) !important;
+    right: rem-calc(5) !important;
+
+    @include at-least(medium) {
+      left: rem-calc(40) !important;
+      right: rem-calc(40) !important;
+    }
+  }
+
+  .Modal__Header {
+    min-height: 0;
+  }
+}
+.image-carousel__main-image-figure {
+  text-align: center;
+  margin-left: rem-calc(10);
+  margin-right: rem-calc(10);
+}
+
+.image-carousel__main-image {
+  max-width: 100%;
+  margin: 0 auto;
+  max-height: rem-calc(400);
+
+  @include at-least(xlarge) {
+    max-height: rem-calc(700);
+  }
+}
+
+.image-carousel__thumbnails {
+  width: 80%;
+  margin: 0 auto;
+  max-width: $bp-medium;
+  img {
+    cursor: pointer;
+  }
+}

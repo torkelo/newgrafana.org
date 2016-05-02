@@ -1,0 +1,44 @@
+// Card/list view toggle
+// --------------------------------------------------------------------------
+.view-toggle {
+  display: none;
+  @include at-least(small) {
+    display: block;
+  }
+}
+
+.view-toggle button {
+  border: 0;
+  width: 40px;
+  height:40px;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, darken($gray, 15%) 0%, $dark-gray 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+  display:inline-block;
+  outline: none;
+}
+
+.view-toggle button:hover {
+  background: linear-gradient(135deg, darken($gray, 12%) 0%, darken($gray, 18%) 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+}
+
+.toggle-item {
+  & img {
+    width:16px;
+    opacity: 0.3;}
+}
+
+.view-toggle .active {
+  background: linear-gradient(135deg, darken($gray, 2%)  0%, darken($gray, 10%) 100%);
+  & img {
+    opacity: 1;}
+}
+
+.toggle-item:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.toggle-item:last-child {
+  border-radius: 0 4px 4px 0;
+}

@@ -1,0 +1,89 @@
+.ReactModal__Overlay {
+  -webkit-perspective: 600;
+  perspective: 600;
+  opacity: 0;
+  z-index: $z-index-6;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  overflow-y: scroll;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+
+.ReactModal__Content {
+  border: none !important;
+  bottom: initial !important;
+  background: transparent !important;
+  -webkit-transform: scale(0.9);
+  width: auto;
+  left: initial !important;
+  right: initial !important;
+  @include at-least(medium) {
+    width: 850px;
+    margin: 30px auto;
+    left: rem-calc(40) !important;
+    right: rem-calc(40) !important;
+  }
+}
+
+.ReactModal__Content--after-open {
+  -webkit-transform: scale(1);
+  transition: all 200ms ease-in;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+  -webkit-transform: scale(0.9);
+  transition: all 200ms ease-in;
+}
+
+.Modal__Header {
+  min-height: 2rem;
+}
+
+.Modal__Content {
+  background: $color-page-hero-bg !important;
+  border: 1px solid $primary-color;
+  -moz-border-image: -moz-$orange-gradient;
+  -webkit-border-image: -webkit-$orange-gradient;
+  border-image: $orange-gradient;
+  border-image-slice: 1;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.Modal__CloseButton {
+  @extend .btn--close;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.modal-container {
+  @include at-least(medium) {
+    display: flex;
+    justify-content: center;
+    padding: 0 rem-calc(20);
+  }
+}
+
+.modal-container .single-column {
+  @include at-least(medium) {
+    width: 90%;
+  }
+}
+
+.modal-container .single-column.bottom {
+  @include at-least(medium) {
+    align-self: flex-end;
+  }
+}
+
+.modal-container .single-column.padded {
+  @include at-least(medium) {
+    padding-top: rem-calc(50);
+  }
+}

@@ -1,0 +1,52 @@
+//
+// Code (inline and block)
+// --------------------------------------------------
+
+
+// Inline and block code styles
+code,
+pre {
+  background-color: $gray;
+  color: $white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+// Inline code
+code {
+  color: $white;
+  background-color: $gray;
+  border: 1px solid darken($gray, 15%);
+  white-space: nowrap;
+}
+
+// Blocks of code
+pre {
+  display: block;
+  line-height: 1.45;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: $gray;
+
+  &.pre--no-bottom-margin {
+    margin-bottom: rem-calc(3);
+  }
+
+  // Make prettyprint styles more spaced out for readability
+  &.prettyprint {
+    margin-bottom: 1.45;
+  }
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    color: inherit;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+  }
+}
+

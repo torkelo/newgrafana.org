@@ -1,0 +1,100 @@
+// Profile Page
+
+.profile-avatar {
+	border-radius: 2px;
+	margin-bottom: rem-calc(5)
+}
+
+.profile-gnet-icon {
+	display: inline-block;
+	margin-right: rem-calc(5);
+	vertical-align: sub;
+}
+
+.profile-username {
+	display: inline-block;
+	margin: rem-calc(0 0 10 0);
+	line-height: 2;
+}
+
+.profile-name {
+	margin: 0;
+	font-weight: 400;
+}
+
+.profile-logout {
+	margin-top: rem-calc(30);
+}
+
+.profile-logout--icon {
+	margin-right: rem-calc(5);
+}
+
+.profile-sidebar-text {
+	margin: 0;
+}
+
+.profile-sidebar-ui-list {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: top;
+
+  @include at-least(small) {
+    margin: rem-calc(0 0 40);
+  }
+
+	padding-left: 0;
+  font-size: rem-calc(14);
+
+  > li {
+    display: block;
+    line-height: .5
+  }
+}
+
+.profile-box {
+	height: 200px;
+	width: 200px;
+  display: inline-block;
+  @include at-least(small) {
+    display: block;
+  }
+}
+
+.profile-asteroid {
+    position: relative;
+
+    height: 200px;
+    background: url('../../static/img/claimed_asteroid.svg') no-repeat;
+    background-size: 232px 280px;
+    background-color: $darker-gray;
+}
+
+.profile-asteroid-name {
+    display: block;
+    position: absolute;
+    top: 118px;
+    left: -63px;
+    width: 328px;
+    color: $medium-gray;
+    font-weight: 900;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: skew(6deg,-8.5deg);
+    text-shadow: 0px -1px 1px rgba(255, 255, 255, .2);
+}
+
+.profile-asteroid-name-long {
+    top: 124px;
+    font-size: 14px;
+}
+
+.profile-asteroid-name-medium {
+    top: 124px;
+    font-size: 14px;
+}
+
+.profile-interior--section {
+    margin-bottom: $spacer * 3;
+}

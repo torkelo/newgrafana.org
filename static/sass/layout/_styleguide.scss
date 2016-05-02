@@ -1,0 +1,18 @@
+.styleguide {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.styleguide__section {
+  margin-bottom: 5rem;
+  & li {margin-bottom: 1rem;}
+}
+
+.styleguide__spinner .spinner {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 100px 0;
+    z-index: $z-index-6 + 1;
+    color: $white;
+}

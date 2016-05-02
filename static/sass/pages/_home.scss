@@ -1,0 +1,164 @@
+// ==========================================================================
+// HOME
+// ==========================================================================
+
+
+
+// Plugins
+// -------------------------------------------------------------------------
+
+.plugins {
+  margin-bottom: rem-calc(60);
+  padding-top: rem-calc(20);
+  text-align: center;
+
+  @include at-least(medium) {
+    padding: rem-calc(20 30);
+  }
+}
+
+.plugins .page-section__title {
+  margin: rem-calc(0 0 10);
+  text-align: left;
+}
+
+.plugins > p {
+  font-size: rem-calc(20);
+  text-align: left;
+}
+
+// Pillars
+// -------------------------------------------------------------------------
+
+@mixin pillar($color) {
+  h2,
+  a {
+    color: $color;
+    text-decoration: none;
+  }
+
+  .btn {
+    border-color: $color;
+    color: $color;
+  }
+}
+
+.pillars {
+  margin-bottom: rem-calc(60);
+
+  @include at-least(medium) {
+    margin-bottom: rem-calc(140);
+  }
+}
+
+.pillars .page-section__headline {
+  margin-bottom: rem-calc(30);
+}
+
+.pillars-list {
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.pillars-list__title {
+  font-style: italic;
+  font-weight: 400;
+}
+.pillars-list__item {
+  position: relative;
+  margin-bottom: rem-calc(40);
+  padding-bottom: rem-calc(40);
+
+  @include at-least(small) {
+    width: 50%;
+    padding-right: rem-calc(40);
+  }
+
+  @include at-least(large) {
+    width: 25%;
+    margin-bottom: 0;
+  }
+}
+
+.pillars-list__icon {
+  text-align: center;
+  padding-right: 1.5rem;
+}
+
+.pillars-list__icon img {
+  display: inline-block;
+  width: rem-calc(100);
+}
+
+.pillars-list p {
+  font-size: rem-calc(18);
+}
+
+.pillars-list p > a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pillars-list__item.visualize {
+  @include pillar($primary-color);
+}
+
+.pillars-list__item.apps {
+  @include pillar($amethyst);
+}
+
+.pillars-list__item.scale {
+  @include pillar($blue);
+}
+
+.pillars-list__item.support {
+  @include pillar($alert-color);
+}
+
+.pillars-list__footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @include at-least(medium) {
+    padding-right: rem-calc(30);
+  }
+
+  @include at-least(large) {
+    // text-align: center;
+  }
+}
+
+.pillars-list__footer .visualize {
+  @include outline-styles($primary-color, #f26529);
+}
+
+.pillars-list__footer .extend {
+  @include outline-styles($amethyst, #a442c1);
+}
+
+.pillars-list__footer .host {
+  @include outline-styles($blue, #1c6094);
+}
+
+.pillars-list__footer .support {
+  @include outline-styles($monza, #9e0437);
+}
+
+
+// Footer CTA
+// -------------------------------------------------------------------------
+
+.footer-cta {
+  margin-bottom: rem-calc(60);
+  text-align: center;
+}
+
+.footer-cta .page-section__headline {
+  margin-bottom: rem-calc(30);
+}

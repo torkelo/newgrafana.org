@@ -1,0 +1,68 @@
+@mixin make-default() {
+  & {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+}
+
+@mixin make-offset($columns) {
+  @for $number from 1 through $columns {
+    &-offset-#{$number} {
+      margin-left: unquote('#{100 / $columns * $number}%');
+    }
+  }
+}
+
+@mixin make-column($columns ) {
+  @for $number from 1 through $columns {
+    &-#{$number} {
+      width: unquote('#{100 / $columns * $number}%');
+      flex: none;
+      // Can change to flex if we want with these two properties and width and flex: none
+      // but unsure about if the cards in plugin list look alright on mobile browsers
+      // flex: 0 0 unquote('#{100 / $columns * $number}%');
+      // min-width: 0;
+    }
+  }
+}
+
+@mixin make-grid-column($breakpoint, $columns, $extra: '') {
+  .grid#{$extra} > .row > .col--#{$breakpoint},
+  .row#{$extra} > .col--#{$breakpoint} {
+    @include make-column($columns);
+    @include make-offset($columns)
+  }
+}
+
+@mixin init-helpers($breakpoints) {
+  @each $breakpoint, $width in $breakpoints {
+    @include make-helpers($breakpoint);
+  }
+}
+
+@mixin init-column-defaults($breakpoints) {
+  @each $breakpoint, $width in $breakpoints {
+    .col--#{$breakpoint} {
+      @include make-default();
+    }
+  }
+}
+
+@mixin init-columns($breakpoints, $columns, $extra: '') {
+  @each $breakpoint, $width in $breakpoints {
+    @if ($width == 0) {
+      @include make-grid-column($breakpoint, $columns, $extra);
+    } @else {
+      @media (min-width: $width) {
+        @include make-grid-column($breakpoint, $columns, $extra);
+      }
+    }
+  }
+}
+
+@mixin init($breakpoints, $columns) {
+  @include init-helpers($breakpoints);
+  @include init-column-defaults($breakpoints);
+  @include init-columns($breakpoints, $columns);
+}

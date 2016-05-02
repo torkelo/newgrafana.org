@@ -1,0 +1,65 @@
+// Signup
+// -------------------------------------------------------------------------
+
+.signup {
+  margin-bottom: rem-calc(60);
+  padding: rem-calc(30);
+  border-width: 1px;
+  text-align: center;
+  border: 1px solid $primary-color;
+  -moz-border-image: -moz-$orange-gradient;
+  -webkit-border-image: -webkit-$orange-gradient;
+  border-image: $orange-gradient;
+  border-image-slice: 1;
+
+  @include at-least(medium) {
+    margin: rem-calc(0 30 60);
+    padding: rem-calc(60 100);
+  }
+}
+
+.signup--modal {
+  margin-bottom: rem-calc(20);
+  padding: 0.5rem;
+  text-align: center;
+  @include at-least(medium) {
+    margin: rem-calc(0 30 60);
+    padding: 0;
+  }
+}
+
+.signup .page-section__headline, .signup--modal .page-section__headline {
+  padding-bottom: 0;
+}
+
+.signup--modal .page-section__subhead {
+  margin-bottom: 1rem;
+  font-size: rem-calc(16);
+  @include at-least(medium) {
+    margin-bottom: 2rem;
+  }
+}
+
+.signup > p {
+  font-size: rem-calc(20);
+}
+
+.signup a {
+  color: $primary-color;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-form {
+  max-width: rem-calc(510);
+  margin: 0 auto;
+}
+
+.btn.signup-form__btn {
+  width: 100%;
+  font-weight: 400;
+
+  @include at-least(small) {
+    width: auto;
+  }
+}

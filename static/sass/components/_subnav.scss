@@ -1,0 +1,128 @@
+// ==========================================================================
+// SUBNAV
+// ==========================================================================
+
+
+
+.page-subnav {
+  background: $darker-gray;
+  display: none;
+
+  @include at-least(small)  {
+    display: block;
+  }
+}
+
+
+
+// Tabs
+// -------------------------------------------------------------------------
+
+.page-subnav__tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid #131313;
+    border-left: 1px solid #363636;
+  }
+}
+
+.subnav__item {
+  @include at-least(small) {
+    width: 25%;
+    border-right: 1px solid #363636;
+    border-left: 1px solid #131313;
+  }
+}
+
+.subnav__link {
+  display: block;
+  position: relative;
+  padding: 20px;
+  font-size: 23px;
+  font-style: italic;
+  text-decoration: none;
+
+  @include at-least(small) {
+    padding: 20px;
+    text-align: center;
+
+    &:after {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      content: '';
+    }
+  }
+}
+
+// Sticky Classes
+// -------------------------------------------------------------------------
+
+.page-subnav__drop-shadow {
+  box-shadow: 0 1px 5px $black;
+}
+
+// Link Colors
+// ------------------------------------
+
+@mixin subnav-link($color) {
+  $tint: tint($color, 75%);
+
+  color: $color;
+
+  &:hover {
+    &:after {
+      background: linear-gradient(to right, $tint 0%, $color 75%);
+    }
+  }
+}
+
+.subnav__link.visualize {
+  @include subnav-link($primary-color);
+}
+
+.subnav__link.extend {
+  @include subnav-link($amethyst);
+}
+
+.subnav__link.host {
+  @include subnav-link($blue);
+}
+
+.subnav__link.support {
+  @include subnav-link($monza);
+}
+
+@mixin subnav-link-active($color) {
+  $tint: tint($color, 75%);
+
+  color: $color;
+
+  &:after {
+    background: linear-gradient(to right, $tint 0%, $color 75%);
+  }
+}
+
+.subnav__link.visualize.active {
+  @include subnav-link-active($primary-color);
+}
+
+.subnav__link.extend.active {
+  @include subnav-link-active($amethyst);
+}
+
+.subnav__link.host.active {
+  @include subnav-link-active($blue);
+}
+
+.subnav__link.support.active {
+  @include subnav-link-active($monza);
+}

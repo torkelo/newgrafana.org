@@ -1,0 +1,165 @@
+// ==========================================================================
+// SUPPORT PLANS PAGE
+// Author note: These styles & the corresponding support page was written 
+// under severe time constraints and breaks a lot of conventions found
+// elsewhere. Before talking smack though, judge not lest ye be judged. -MST
+// ==========================================================================
+
+
+table.support-table {
+	border: none;
+	border-collapse: collapse;
+	font-size: 90%;
+	font-weight: 400;
+	margin-bottom: $spacer * 5;
+	th {
+		text-align: center;
+	}
+	th.large {
+		font-size: 150%;
+		background-color: #2F2F2F;
+		border-top: 3px solid $dark-gray;
+		border-right: 2px solid $dark-gray;
+		padding: 20px 0;
+	}
+	th.blank {
+		background-color: transparent;
+	}
+	th.sec {
+		color: #fff;
+		font-size: 125%;
+		padding-bottom: 1rem;
+		position: relative;
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: rem-calc(1);
+			background: $orange-gradient;
+			content: '';
+		}
+	}
+	td {
+		background-color: $dark-gray;
+		text-align: center;
+		font-weight: 700;
+		border: 1px solid $dark-gray;
+		color: $white;
+		height: 60px;
+	}
+	td.sidebar {
+		background-color: #2F2F2F;
+		border-left: 1px solid $dark-gray;
+		border-right: 3px solid $dark-gray;
+		border-bottom: 1px solid $dark-gray;
+		width: 150px;
+		text-align: left;
+		font-size: 85%;
+		padding: 10px;
+	}
+
+	td.dev {
+		font-weight: 300;
+		background-color: #2F2F2F;
+		border-left: 2px solid $dark-gray;
+		border-right: 2px solid $dark-gray;
+		.support-text {
+			font-weight: 300;
+			color: #04a64d;
+			margin-top: 8px;
+		}
+	}
+	td.prd {
+		font-weight: 300;
+		background-color: #2F2F2F;
+		border-left: 2px solid $dark-gray;
+		border-right: 2px solid $dark-gray;
+		.support-text {
+			color: #f79622;
+			margin-top: 8px;
+		}
+	}
+	td.pro {
+		font-weight: 300;
+		background-color: #2F2F2F;
+		border-left: 2px solid $dark-gray;
+		border-right: 2px solid $dark-gray;
+		.support-text {
+			color: #f79622;
+			margin-top: 8px;
+		}
+	}
+	td.ent {
+		font-weight: 300;
+		background-color: #2F2F2F;
+		border-left: 2px solid $dark-gray;
+		border-right: 2px solid $dark-gray;
+		.support-text {
+			color: #04a64d;
+			margin-top: 8px;
+		}
+	}
+
+	td.icon {
+		vertical-align: top;
+	}
+
+	td {
+		img {
+			display: block;
+			margin: 20px auto 0 auto;
+		}
+	}
+
+	p.small {
+		font-weight: 300;
+	}
+}
+
+.support-table-col--custom {
+	margin-top: $spacer * 7;
+	padding: 0;
+}
+
+.dev-col {
+	width: 200px;
+	border: 2px solid $dark-gray;
+	height: 50px;
+	color: #fff;
+	background-color: #2F2F2F;
+}
+
+.prod-col {
+	width: 200px;
+	border: 2px solid $dark-gray;
+	height: 50px;
+	color: #fff;
+	background-color: #2F2F2F;
+}
+
+.pro-col {
+	width: 200px;
+	border: 2px solid $dark-gray;
+	height: 50px;
+	color: #fff;
+	background-color: #2F2F2F;
+}
+
+.enterprise-col {
+	width: 200px;
+	border: 2px solid $dark-gray;
+	height: 50px;
+	color: #fff;
+	background-color: #2F2F2F;
+}
+
+.support-plan-note {
+	display: block;
+	margin-bottom: $spacer * 5;
+	font-size: 90%;
+	strong {
+	color: $white;
+	}
+}
+

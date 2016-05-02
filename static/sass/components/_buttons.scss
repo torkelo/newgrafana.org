@@ -1,0 +1,276 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+
+
+// Default
+// ------------------------------------
+
+.btn {
+  @include button;
+}
+
+
+
+// Primary
+// ------------------------------------
+
+.btn--primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+  background: linear-gradient($primary-color 0%, darken($primary-color, 10%) 100%);
+  color: $white;
+
+  &:hover {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    background: $primary-color;
+    cursor: pointer;
+
+  }
+}
+
+
+
+// Secondary
+// ------------------------------------
+
+.btn--secondary {
+  @include font-smoothing;
+  border-color: $blue;
+  background: $blue;
+  color: $white;
+  font-weight: 400;
+  padding: rem-calc(0 50);
+
+  @include at-least(small) {
+    padding: rem-calc(0 100);
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+// Add
+// ------------------------------------
+
+.btn--add {
+  @include font-smoothing;
+  border-color: $success-color;
+  background: $success-color;
+  color: $white;
+  font-weight: 400;
+  padding: rem-calc(0 50);
+
+  @include at-least(small) {
+    padding: rem-calc(0 100);
+  }
+
+  a {
+  color: $white;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+// Delete
+// ------------------------------------
+
+.btn--delete {
+  @include font-smoothing;
+  border-color: $monza;
+  background: $monza;
+  color: $white;
+  font-weight: 400;
+  padding: rem-calc(0 50);
+
+  @include at-least(small) {
+    padding: rem-calc(0 100);
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f00d";
+  }
+}
+
+a.btn--delete {
+  color: $white;
+}
+
+.btn--delete__confirm-delete {
+  &:after{
+    width: 0;
+    opacity: 0;
+    display: inline-block;
+    padding-left: rem-calc(5);
+    content: "CONFIRM DELETE";
+    animation: btn--delete_grow 100ms cubic-bezier(0.6, -0.28, 0.74, 0.05) forwards;
+  }
+}
+
+@keyframes btn--delete_grow {
+    0%    {width: 0; opacity: 0}
+    95%   {opacity: 0}
+    100%    {width: 100px; opacity: 1}
+}
+
+.btn--delete__cancel {
+  cursor: pointer;
+  margin-left: rem-calc(10);
+}
+
+// reversed
+// ------------------------------------
+
+.btn--reversed {
+  border-color: darken($medium-gray, 20%);
+  background-color: darken($medium-gray, 20%);
+  background: linear-gradient(darken($medium-gray, 20%), darken($medium-gray, 30%) 100%);
+  color: $white;
+
+  &:hover {
+    border-color: $medium-gray;
+    background-color: $medium-gray;
+    background: $medium-gray;
+    cursor: pointer;
+
+  }
+}
+
+
+// Small
+// ------------------------------------
+
+.btn--small {
+  height: rem-calc(30);
+  padding: rem-calc(0 16);
+  font-size: $font-size-epsilon;
+  line-height: rem-calc(28);
+}
+
+
+// Large
+// ------------------------------------
+
+.btn--large {
+  height: rem-calc(50);
+  font-size: $font-size-gamma;
+  line-height: rem-calc(48);
+}
+
+// Outline -- created mixin for this: _buttons.scss
+// ------------------------------------
+
+.btn--outline {
+  @include outline-styles($primary-color, #f26529);
+}
+
+
+.download__btn {
+  position: absolute;
+  bottom: 20px;
+  left: rem-calc(96);
+  padding: rem-calc(0 30)
+}
+
+
+.btn--outline-light {
+  border-color: $white;
+  background: transparent;
+  color: $white;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.btn--outline-secondary {
+  border-color: $secondary-color;
+  background: transparent;
+  color: $white;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.btn--outline-secondary__disabled {
+  border-color: $secondary-color;
+  background: transparent;
+  color: $secondary-color;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+// Secondary action text links (buttonless buttons)
+// ------------------------------------
+
+a.btn--no-outline-secondary {
+  border-color: transparent;
+  background: transparent;
+  color: $secondary-color;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.btn--close {
+  float: right;
+  border: 0;
+  background: 0 0;
+  font-size: $font-size-kilo;
+  font-weight: 700;
+  line-height: 1;
+  color: $white;
+}
+
+.interior-section.early-access-signup a.btn--outline-secondary {
+  color: $secondary-color;
+}
+
+// Secondary action text links (buttonless buttons)
+// ------------------------------------
+
+.btn_submitting {
+  background-color: $light-gray;
+  background: linear-gradient($light-gray 0%, darken($light-gray, 10%) 100%);
+}
+
+.btn_submitting-enter {
+  opacity: 0.01;
+}
+
+.btn_submitting-enter.btn_submitting-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.btn_submitting-leave {
+  opacity: 1;
+}
+
+.btn_submitting-leave.btn_submitting-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+// Button spacing when multiple buttons sit next to each other
+// ------------------------------------
+
+.btn-inline {
+  margin: rem-calc(0 10 10 10);
+}
+

@@ -1,0 +1,28 @@
+/* Standard Column */
+.col {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: ($grid-padding * 0.5);
+}
+
+/* No Gutters */
+.row--no-gutters > .col,
+.col--no-gutters {
+  padding: 0;
+}
+
+/* Large (2x) Gutters */
+.row--lg-gutters > .col,
+.col--lg-gutters {
+  padding: $grid-padding;
+}
+
+.row--internal-gutters > .col {
+  padding: $grid-padding 0 0 $grid-padding;
+}
+
+.row--lg-gutters.row--internal-gutters > .col {
+  padding: ($grid-padding * 2) 0 0 ($grid-padding * 2);
+}

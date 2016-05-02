@@ -1,0 +1,49 @@
+// ==========================================================================
+// COPY TO CLIPBOARD ANIMATION
+// ==========================================================================
+
+.form-update-container {
+	position: absolute;
+	margin-top: rem-calc(10);
+}
+
+.form-update--margin-container  {
+	margin-bottom: $spacer * 2;
+}
+
+.updates-enter {
+	opacity: 0.01;
+	transition: all 300ms ease-in;
+}
+
+.updates-enter.updates-enter-active {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.updates-appear {
+	opacity: 0.01;
+ 	transition: all 200ms ease-in-out 300ms;
+}
+
+.updates-appear.updates-appear-active {
+	opacity: 1;
+}
+
+.updates-leave {
+	opacity: 1;
+	transition: all 200ms ease-out;
+}
+
+.updates-leave.updates-leave-active {
+	opacity: 0.01;
+}
+
+.updates--message-fade{
+	animation: message-fade 500ms ease-out 10s forwards;
+}
+
+@keyframes message-fade {
+    0%   	{opacity: 1;}
+    100%  	{opacity: 0;}
+}

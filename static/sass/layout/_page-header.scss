@@ -1,0 +1,45 @@
+// ==========================================================================
+// PAGE HEADER
+// ==========================================================================
+
+
+
+.page-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: rem-calc(0);
+  padding: rem-calc(35 0);
+}
+
+.page-header__menu {
+  position: relative;
+}
+
+
+
+// Logo
+// -------------------------------------------------------------------------
+
+.site-logo {
+  width: rem-calc(208);
+  height: rem-calc(34);
+  margin: 0;
+  position: relative;
+  top: rem-calc(-14);
+  transition: all .25s ease-out;
+
+  @media (min-width: $bp-nav) {
+    width: rem-calc(220);
+    height: rem-calc(48);
+    top: rem-calc(-3);
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

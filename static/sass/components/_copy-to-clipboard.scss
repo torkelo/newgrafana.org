@@ -1,0 +1,56 @@
+.copy-to-clipboard--container {
+  height: 5px;
+  margin-top: rem-calc(10);
+  margin-bottom: rem-calc(30);
+}
+
+.copy-to-clipboard {
+  position: absolute;
+  font-size: $font-size-epsilon;
+  color: $primary-color;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .9;
+  }
+}
+
+// ==========================================================================
+// COPY TO CLIPBOARD ANIMATION
+// ==========================================================================
+
+
+.clipboard-enter {
+	opacity: 0.01;
+ 	transition: all 100ms ease-in;
+}
+
+.clipboard-enter.clipboard-enter-active {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.clipboard-appear {
+	opacity: 0.01;
+ 	transition: all 200ms ease-in-out 300ms;
+}
+
+.clipboard-appear.clipboard-appear-active {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.clipboard-leave {
+	opacity: 1;
+	transition: all 200ms ease-out;
+}
+
+.clipboard-leave.clipboard-leave-active {
+	opacity: 0.01;
+	transform: translate(0,-25px);
+}

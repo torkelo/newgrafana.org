@@ -1,0 +1,44 @@
+// =========================================================================
+// PAGE TABS
+// =========================================================================
+
+
+.page-tabs {
+  @include clearfix;
+  margin: rem-calc(0 0 20);
+  border-bottom: 1px solid $light-gray;
+
+  @include at-least(small) {
+    padding-left: rem-calc(20);
+  }
+}
+
+.page-tabs > .tab-link {
+  margin-bottom: -1px;
+  float: left;
+
+  &:last-child {
+    margin-bottom: -1px;
+  }
+}
+
+.tab-link,
+a.tab-link,
+.page-tabs a.tab-link {
+  display: block;
+  padding: rem-calc(10 25);
+  border: 1px solid transparent;
+  color: $white;
+  font-size: rem-calc(14);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab-link-active,
+a.tab-link-active,
+.page-tabs a.tab-link-active {
+  border: 1px solid $light-gray;
+  border-radius: rem-calc(3 3 0 0);
+  border-bottom-color: transparent;
+  background: $dark-gray;
+}

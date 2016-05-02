@@ -1,0 +1,343 @@
+// ==========================================================================
+// INTERIOR PAGE
+// ==========================================================================
+
+.anchor--offset {
+  margin-top: -70px;
+  margin-bottom: 70px;
+  display: block;
+}
+
+.interior-intro {
+  margin-bottom: 0;
+  text-align: center;
+
+  h3 {
+    font-size: $font-size-alpha;
+    font-style: italic;
+    font-weight: 400;
+    color: $white;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+// Section
+// -------------------------------------------------------------------------
+
+@mixin interior-section($color1: $primary-color, $color2: $primary-color) {
+  $tint: tint($color1, 75%);
+
+
+  > .interior-section__title {
+    color: $color1;
+  }
+
+  a {
+    color: $color1;
+  }
+
+  .btn--outline {
+    border-color: $color1;
+    color: $color1;
+
+    &:hover {
+    border: 1px solid $color1;
+    -moz-border-image: -moz-linear-gradient(top left, $color1 0%, $color2 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, $color1 0%, $color2 100%);
+    border-image: linear-gradient(to bottom right, $color1 0%, $color2 100%);
+    border-image-slice: 1;
+    color: tint($color1, 75%);
+     border-radius: 10px;
+    }
+  }
+
+  &:before {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+  }
+}
+
+.interior-section {
+  position: relative;
+  padding-top: rem-calc(45);
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+  }
+}
+
+.interior-section.early-access-signup {
+  @include interior-section($primary-color, #f26529);
+  text-align: start;
+  padding: 0.5rem;
+
+  @include at-least(medium) {
+    padding-top: rem-calc(45);
+    margin-bottom: rem-calc(100); // last item needs some extra breathing space
+  }
+
+  &:before {
+    background: none;
+  }
+}
+
+.interior-section.early-access-signup--small-bottom-margin {
+  @include at-least(medium) {
+    margin-bottom: rem-calc(10);
+  }
+}
+
+.interior-section.modal-wrapper {
+  @include interior-section($primary-color, #f26529);
+  text-align: start;
+  padding: 0.5rem;
+
+  @include at-least(medium) {
+    margin-bottom: rem-calc(100); // last item needs some extra breathing space
+  }
+
+  &:before {
+    background: none;
+  }
+}
+
+.interior-section.modal-wrapper--small-bottom-margin {
+  @include at-least(medium) {
+    margin-bottom: rem-calc(40);
+  }
+}
+
+.interior-section.visualize {
+  @include interior-section($primary-color, #f26529);
+  margin-bottom: rem-calc(100); // last item needs some extra breathing space
+}
+
+.interior-section.extend {
+  @include interior-section($amethyst, #a442c1);
+}
+
+.interior-section.host {
+  @include interior-section($blue, #1c6094);
+}
+
+.interior-section.support {
+  @include interior-section($monza, #9e0437);
+}
+
+.interior-section__icon {
+  display: block;
+  margin: 0 auto rem-calc(20);
+  width: rem-calc(100);
+  height: rem-calc(100);
+}
+
+.interior-section__title {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+
+  @include at-least(medium) {
+    margin-bottom: 0;
+  }
+}
+
+.interior-section__title.title--with-subcopy {
+  margin-bottom: rem-calc(5);
+}
+
+.interior-section__img {
+  margin: 0;
+
+  @include at-least(small) {
+    margin: 0 rem-calc(100);
+  }
+
+  @include at-least(medium) {
+    margin: 0;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.interior-section__img--centered {
+  margin: 0 auto;
+
+  @include at-least(small) {
+    margin: 0 rem-calc(100);
+  }
+
+  @include at-least(medium) {
+    margin: 0 auto;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.interior-section__img.padded {
+  @include at-least(medium) {
+    padding: 0 rem-calc(50);
+  }
+}
+
+.interior-section__body {
+  padding: 50px 0 rem-calc(87);
+}
+
+.interior-section p {
+  margin: 0 0 1.4em;
+  color: $white;
+  font-size: rem-calc(16);
+}
+
+.interior-emphasis {
+  font-size: $font-size-alpha;
+  font-style: italic;
+  font-weight: 400;
+  color: $white;
+}
+
+// Columns
+// -------------------------------------------------------------------------
+
+.interior-columns {
+  @include at-least(medium) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem-calc(20);
+  }
+}
+
+.interior-columns.padded {
+  padding: 50px 0 rem-calc(87);
+}
+
+.interior-columns .column {
+  @include at-least(medium) {
+    width: 48%;
+  }
+}
+
+.interior-columns .column + .column {
+  margin-top: rem-calc(40);
+
+  @include at-least(medium) {
+    margin-top: 0;
+  }
+}
+
+.interior-columns .column.right {
+  @include at-least(medium) {
+    order: 2;
+  }
+}
+
+.interior-columns .column.left {
+  @include at-least(medium) {
+    order: 1;
+  }
+}
+
+.interior-columns .column.top {
+  @include at-least(medium) {
+    align-self: flex-start;
+  }
+}
+
+.interior-columns .column.bottom {
+  @include at-least(medium) {
+    align-self: flex-end;
+  }
+}
+
+.interior-columns .column.padded {
+  @include at-least(medium) {
+    padding-top: rem-calc(50);
+  }
+}
+
+
+
+// List
+// -------------------------------------------------------------------------
+
+.interior-list {
+  margin-bottom: rem-calc(50);
+}
+
+.interior-list > .interior-list__item {
+  margin-bottom: rem-calc(45);
+  padding: rem-calc(10) 0 rem-calc(10) rem-calc(125);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: rem-calc(75) rem-calc(75);
+
+  @include at-least(medium) {
+    padding: rem-calc(10) 0 rem-calc(10) rem-calc(275);
+    background-size: rem-calc(120) rem-calc(120);
+    background-position: 60px 50%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.interior-list__item.support {
+  background-image: url('../../static/img/interior-support_dev.svg');
+  background-size: rem-calc(100) rem-calc(100);
+}
+
+.interior-list__item.backups {
+  background-image: url('../../static/img/interior-support_dashboard.svg');
+  background-size: rem-calc(100) rem-calc(100);
+}
+
+.interior-list__item.monitoring {
+  background-image: url('../../static/img/interior-support_health.svg');
+  background-size: rem-calc(100) rem-calc(100);
+}
+
+.interior-list__item > p {
+  margin: 0;
+}
+
+.interior-list__title {
+  margin: 0;
+  color: $white;
+  font-size: 23px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.interior-section__title--primarycolor {
+  @extend .interior-section__title;
+  color: $primary-color;
+  text-align: left;
+  margin: rem-calc(15) 0;
+}
+
+// Form Overrides
+// -------------------------------------------------------------------------
+
+.interior-section .form {
+  margin-left: 0;
+}

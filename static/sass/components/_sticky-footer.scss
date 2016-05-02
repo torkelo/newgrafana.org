@@ -1,0 +1,104 @@
+// ==========================================================================
+// STICKY FOOTER
+// ==========================================================================
+
+
+.sticky-footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	overflow: visible;
+	z-index: $z-index-6;
+	padding: rem-calc(20);
+	background-color: $dark-orange;
+	box-shadow: 0px -5px 15px 0px $black;
+	opacity: 0.97;
+	padding: rem-calc(5 10 10 10);
+
+}
+
+.sticky-footer__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+	margin: 7px 20px 0 0;
+}
+
+.sticky-footer__copy {
+	color: $white;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.sticky-footer__items {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.sticky-footer__points {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	line-height: 1.8;
+
+	& .number {
+		font-weight: 700;
+		@include at-least(small) {
+			padding:3px 7px;
+			border: 3px solid $white;
+			border-radius:50%;
+		}
+	}
+}
+
+.sticky-footer__footer-signup {
+	display: inline-block;
+	margin: 10px;
+}
+
+.sticky-footer__image {
+    position: absolute;
+    top: -126px;
+    right: 100px;
+}
+
+.sticky-footer__close {
+ 	@extend .btn--close;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.sfanimate-enter {
+	opacity: 0.01;
+	transform: translate(0,-100px);
+ 	transition: all 300ms ease-in;
+}
+
+.sfanimate-enter.sfanimate-enter-active {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.sfanimate-appear {
+	opacity: 0.01;
+	transform: translate(0,100px);
+ 	transition: all 500ms ease-in-out 3500ms;
+}
+
+.sfanimate-appear.sfanimate-appear-active {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.sfanimate-leave {
+	opacity: 1;
+	transition: all 350ms ease-in;
+}
+
+.sfanimate-leave.sfanimate-leave-active {
+	opacity: 0.01;
+	transform: translate(0,100px);
+}

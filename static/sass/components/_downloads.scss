@@ -1,0 +1,71 @@
+// =========================================================================
+// DOWNLOADS
+// =========================================================================
+
+.download {
+  text-align: left;
+}
+
+.download__logo {
+  width: rem-calc(66);
+  height: rem-calc(66);
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.download__logo > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.download__body {
+}
+
+.download__body .plugin-card__byline {
+    margin-left: 5rem;
+}
+
+.download__name {
+  margin: 0 0 0 5rem;
+  color: $white;
+  font-size: rem-calc(20);
+}
+
+.download__copy {
+  margin: 0 0 0.5rem 5rem;
+  color: $light-gray;
+  font-size: rem-calc(13);
+  line-height: rem-calc(18);
+}
+
+
+
+
+
+// Card view
+// --------------------------------------------------------------------------
+
+.downloads-list {
+}
+
+.downloads-list__item {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  background: linear-gradient(135deg, darken($gray, 15%) 0%, $dark-gray 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+  min-height: 13.5rem;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.downloads-list__item:hover {
+  background: linear-gradient(135deg, darken($gray, 13%) 0%, $dark-gray 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+}
+
+.downloads-list__item:active {
+  background: linear-gradient(135deg, darken($gray, 16%) 0%, darken($dark-gray, 1%) 100%);
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.1), 1px 1px 0px 0px rgba(0,0,0, 0.3);
+}

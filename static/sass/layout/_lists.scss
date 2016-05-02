@@ -1,0 +1,39 @@
+// ==========================================================================
+// LISTS
+// ==========================================================================
+
+
+
+.ui-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-list > li {
+  // margin-bottom: rem-calc(0);
+
+  &:last-child {
+    //margin-bottom: 0;
+  }
+}
+
+.inline-list > li {
+  display: inline-block;
+  padding-right: 1.25rem;
+  vertical-align: top;
+}
+
+.image-list {
+  padding: 0;
+
+  figure {
+    margin: 0;
+    cursor: pointer;
+
+    figcaption {
+      display: none;
+      width: rem-calc(120);
+    }
+  }
+}

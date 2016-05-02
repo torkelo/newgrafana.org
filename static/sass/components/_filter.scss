@@ -1,0 +1,40 @@
+.plugin-filter {
+  .plugin-filter__header--narrow {
+    padding: rem-calc(10);
+    background: linear-gradient(135deg, darken($gray, 2%)  0%, darken($gray, 10%) 100%);
+  & img {
+    opacity: 1;}
+  }
+
+  .plugin-filter__header {
+    display: none;
+  }
+
+  .fa-plus-square-o, .fa-minus-square-o {
+    float: right;
+    padding-top: rem-calc(5);
+    padding-right: rem-calc(10);
+  }
+
+  .plugin-filter__options--collapsed {
+    display: none;
+  }
+
+  .plugin-filter__options--expanded {
+    display: block;
+  }
+
+  @include at-least(small) {
+    .plugin-filter__options--collapsed, .plugin-filter__options--expanded {
+      display: block;
+    }
+
+    .plugin-filter__header {
+      display: block;
+    }
+
+    .plugin-filter__header--narrow {
+      display: none;
+    }
+  }
+}
