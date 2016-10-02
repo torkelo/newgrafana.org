@@ -12,10 +12,27 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      rebuild_all: {
-        files: ['static/**/*', 'layouts/**/*', 'content/**/*'],
-        tasks: ['default'],
-        options: {spawn: false}
+      options: {
+        livereload: 3003,
+      },
+      content: {
+        files: ['content/**/*', 'layouts/**/*'],
+        tasks: ['hugo'],
+        options: {spawn: false},
+      },
+      sass: {
+        files: ['static/sass/**/*'],
+        tasks: ['sass', 'postcss'],
+        options: {
+          spawn: false
+        }
+      },
+      js: {
+        files: ['static/js/**/*'],
+        tasks: ['babel', 'systemjs'],
+        options: {
+          spawn: false
+        }
       },
     },
 
@@ -44,10 +61,10 @@ module.exports = function(grunt) {
       mysite: {
         options: {
           hostname: '127.0.0.1',
-          port: 1345,
+          port: 3002,
           protocol: 'http',
           base: 'dist',
-          livereload: true,
+          livereload: 3003,
           keepalive: true,
         }
       }
@@ -111,11 +128,5 @@ module.exports = function(grunt) {
     'systemjs',
     ]);
 
-  grunt.registerTask('build', [
-    'clean',
-    'hugo',
-    'sass',
-    'postcss',
-    ]);
 };
 

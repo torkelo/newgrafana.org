@@ -1,6 +1,6 @@
 import '../vendor/jquery.js';
 
-console.log('BBOOT');
+console.log('ASD');
 
 
 
