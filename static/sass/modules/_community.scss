@@ -1,0 +1,29 @@
+.curated-content {
+  h3 {
+    a {
+      line-height: 1em;
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+}
+
+.curated-header {
+  display: block;
+  border-bottom: 3px solid $secondary-color;
+  padding-bottom: 10px;
+}
+
+.community-icons {
+  icon {
+    padding: 0.35em 0.3em 0.35em;
+    margin-right: 0.5em;
+    border: solid 0.2em #eeeeee;
+    border-radius: 50%;
+    line-height: 0.75em;
+    position: relative;
+    float: left;
+    top: -0.4em;
+    font-size: 1.6em;
+  }
+}

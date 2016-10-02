@@ -1,0 +1,19 @@
+@mixin hollow-button($bg) {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $bg;
+  color: $bg;
+}
+
+button, .button {
+  &.hollow {
+    &.secondary {
+      @include hollow-button($bg: $secondary-color);
+    }
+
+    &.success {
+      @include hollow-button($bg: $success-color);
+    }
+  }
+}

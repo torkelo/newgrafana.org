@@ -1,0 +1,18 @@
+q.quote {
+  background: #ccc;
+  border-left: 10px solid #333;
+  margin: 1.5em 10px;
+  display: block;
+  font-size: 120%;
+  padding: 60px 10px;
+}
+
+q.quote:before {
+  color: #333;
+  content: open-quote;
+  font-size: 5em;
+  font-family: serif;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}

@@ -1,45 +1,35 @@
 	</div>
 </div>
 
-<div class="page-footer wrapper">
-	<div class="page-footer__nav">
-		<div class="page-footer__col">
-			<nav class="site-nav" id="siteNav">
-				<ul class="ui-list">
-					<li class="site-nav__item site-nav__item--text">
-						<a class="site-nav__link" href="/features">Features</a>
-					</li>
-					<li class="site-nav__item site-nav__item--text">
-						<a class="site-nav__link" href="/community">Community</a>
-					</li>
-					<li class="site-nav__item site-nav__item--text">
-						<a class="site-nav__link" href="/blog">Blog</a>
-					</li>
-				</ul>
-			</nav>
+<footer class="page-footer">
+	<div class="footer-bg"></div>
+
+	<div class="footer-content row text-center">
+		{{ partial "newsletter.html" . }}
+
+		<div class="footer-social">
+			<span>
+				<i class="fa fa-github"></i>
+				<a href="https://github.com/grafana/grafana/issues">issue tracker</a> on GitHub
+			</span>
+			<span>
+				<i class="fa fa-comment"></i>
+				<a href="irc://chat.freenode.net/#grafana">#grafana</a> on freenode
+			</span>
+			<span>
+				<i class="fa fa-twitter"></i>
+				<a href="http://twitter.com/grafana">@grafana</a> on Twitter
+			</span>
+			<span>
+				<i class="fa fa-envelope"></i>
+				<a href="mailto:torkel@grafana.org">email</a>
+			</span>
 		</div>
-		<div class="page-footer__col">
-			<nav class="site-nav" id="siteNav">
-				<ul class="ui-list">
-					<li class="site-nav__item">
-						<a class="btn btn--primary" href="/download">Download</a>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__social github" href="https://github.com/grafana/" title="GitHub" target="_blank">GitHub </a>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__social twitter" href="https://twitter.com/grafana" title="Twitter" target="_blank">Twitter</a>
-					</li>
-				</ul>
-			</nav>
+
+
+		<div class="row copyright text-center">
+			&copy; 2015 Torkel Ödegaard &amp; Raintank Inc
 		</div>
+
 	</div>
-
-	<p class="meta">
-		<span>Copyright 2016 © raintank | contact us: </span><a href="mailto:contact@grafana.org">contact@grafana.org</a>
-	</p>
-</div>
-
-
-</body>
-</html>
+</footer>

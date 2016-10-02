@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Grafana | Documentation{{ if .Title }} | {{ .Title }}{{ end }}</title>
-        <meta name="description" content="{{ if .Description }}{{ .Description }}. {{ end }}Documentation for the InfluxData products InfluxDB, Telegraf, Chronograf and Kapacitor, along with the Hosted and Enterprise services">
+        <title>Grafana - {{ if .Title }} | {{ .Title }}{{ end }}</title>
+
+				<meta name="keywords" content="Grafana, Graphite, Dashboard, InfluxDB, OpenTSDB, Elasticsearch, Metrics, Editor, Composer, Analytics, Graphana, Prometheus, Cloudwatch">
+        <meta name="description" content="{{ if .Description }}{{ .Description }}. {{ end }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <link rel="shortcut icon" href="/img/fav32.png" type="image/x-icon">
@@ -12,24 +14,77 @@
 				<link href="/css/styles.css" rel="stylesheet">
 
         <meta name="application-name" content="Grafana" />
-        <meta name="msapplication-TileColor" content="" />
-        <meta name="msapplication-TileImage" content="http://grafana.org/assets/img/logo_new_transparent_200x48.png" />
 
-        <meta name="twitter:card" content="summary">
+				<meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@grafana">
-        <meta name="twitter:title" content="Grafana.org">
-        <meta name="twitter:description" content="Grafana.org">
+				<meta name="twitter:url" content="https://twitter.com/grafana" />
+        <meta name="twitter:title" content="{{ .Title }}">
         <meta name="twitter:image" content="http://grafana.org/assets/img/logo_new_transparent_200x48.png" />
 
-        <meta property="og:title" content="Grafana.org" />
-        <meta property="og:description" content="Grafana.org" />
-        <meta property="og:url" content="https://grafana.org/" />
+				<meta property="og:site_name" content="Grafana.org" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="{{ .Title }}" />
         <meta property="og:image" content="http://grafana.org/assets/img/logo_new_transparent_200x48.png" />
 
         <meta name="Copyright" content="Raintank Inc." />
     </head>
     <body>
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+
 		<div id="content">
 			<div class="page">
 				{{ partial "navbar.html" . }}
 
+  <!--   title == "Grafana &#45; " + (data.page.title || "Beautiful Metrics, Analytics, dashboards and monitoring!") -->
+  <!--  -->
+  <!--   &#45; if data.page.redirect -->
+  <!--     meta http&#45;equiv="refresh" content="0; url=#{data.page.redirect}" -->
+  <!--     link rel="canonical" href="#{data.page.redirect}" -->
+  <!--  -->
+  <!--   meta name="author" content="Torkel Ödegaard" -->
+  <!--   meta name="viewport" content="width=device&#45;width, initial&#45;scale=1" -->
+  <!--   meta name="description" content="" -->
+  <!--   meta name="keywords" content="Grafana, Graphite, Dashboard, InfluxDB, OpenTSDB, Elasticsearch, Metrics, Editor, Composer, Analytics, Graphana, Prometheus, Cloudwatch" -->
+  <!--  -->
+  <!--   link rel="icon" href="/assets/img/fav32.png" -->
+  <!--  -->
+  <!--   == stylesheet_link_tag "all" -->
+  <!--   == stylesheet_link_tag "//netdna.bootstrapcdn.com/font&#45;awesome/4.4.0/css/font&#45;awesome.css" -->
+  <!--   == stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,600" -->
+  <!--  -->
+  <!--   == javascript_include_tag  "all" -->
+  <!--  -->
+  <!--   meta property="og:title" content=(data.page.title || "The leading graph and dashboard builder for visualizing time series metrics.") -->
+  <!--   meta property="og:site_name" content="Grafana.org" -->
+  <!--   meta property="og:type" content="website" -->
+  <!--   meta property="og:image" content="http://grafana.org/assets/img/docs/nice_dashboard.png" -->
+  <!--  -->
+  <!-- body class="#{page_classes}" -->
+  <!--   = partial "layouts/nav" -->
+  <!--  -->
+  <!--   section.main -->
+  <!--     == yield -->
+  <!--  -->
+  <!--   <div id="blueimp&#45;gallery" class="blueimp&#45;gallery blueimp&#45;gallery&#45;controls"> -->
+  <!--       <div class="slides"></div> -->
+  <!--       <h3 class="title"></h3> -->
+  <!--       <a class="prev">‹</a> -->
+  <!--       <a class="next">›</a> -->
+  <!--       <a class="close">×</a> -->
+  <!--       <a class="play&#45;pause"></a> -->
+  <!--       <ol class="indicator"></ol> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   = partial "layouts/_footer" -->
+  <!--   = partial "layouts/analytics" -->
+  <!--  -->
+  <!--  -->

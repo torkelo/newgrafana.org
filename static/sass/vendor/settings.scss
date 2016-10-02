@@ -1,0 +1,124 @@
+@import "../bower_components/foundation/scss/foundation/functions";
+
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+$tertiary-color: gray;
+$primary-color: #008CBA;
+$secondary-color: #ff7800;
+$tertiary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+$white-text-color: #FFFFFF;
+
+// c. Global
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$body-bg: #FFF;
+$body-font-color: #222;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
+
+$row-width: rem-calc(1060); //1148
+
+$dark-hero-bg: #1f1f1f;
+$features-banner-bg: #0099CC;
+
+$grafana-top-nav-bg: rgba(0, 0, 0, 0.6);
+$topbar-bg: transparent;
+$topbar-dropdown-bg: transparent;
+$topbar-dropdown-bg: transparent;
+
+$topbar-height: 80px; // was 80px TRW
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
+$topbar-link-weight: 500; // was normal TRW
+$topbar-link-font-size: rem-calc(14); // was 16 so that it didn't wrap at smaller screen sizes TRW
+$topbar-link-hover-lightness: 5%; // Darken by 10%
+$topbar-link-bg-hover: #222;
+$topbar-link-bg-active: transparent;
+$topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
+$topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen sizes TRW
+
+// $topbar-link-font-family: $body-font-family;
+$topbar-button-font-size: 1.75rem;
+$topbar-breakpoint: 51; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: 53em)";
+
+// We use these to control header font styles
+$header-font-family: $body-font-family;
+$header-font-weight: $font-weight-normal;
+$header-font-style: normal;
+$header-font-color: scale-color($body-font-color, $lightness: 10%);
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+$header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: 600;
+$header-font-style: normal;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(23);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(15);
+$h6-font-size: 1rem;
+
+$h1-font-reduction: rem-calc(15) !default;
+$h2-font-reduction: rem-calc(10) !default;
+$h3-font-reduction: rem-calc(5) !default;
+$h4-font-reduction: rem-calc(5) !default;
+$h5-font-reduction: 0 !default;
+$h6-font-reduction: 0 !default;
+
+// We use these to style <code> tags
+$code-color: scale-color($body-font-color, $lightness: 15%);
+$code-font-family: $font-family-monospace;
+$code-font-weight: $font-weight-normal;
+$code-background-color: $silver;
+$code-border-size: 1px;
+$code-border-style: solid;
+$code-border-color: #BBD9F5;
+$code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+
+// We use these to style blockquotes
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 3px solid $secondary-color;
+$blockquote-cite-font-size: rem-calc(13);
+$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+$blockquote-cite-link-color: $blockquote-cite-font-color;
+
+

@@ -1,0 +1,68 @@
+#top-bar-button {
+  background: $primary-color;
+  font-weight: normal;
+  margin-top: 1.9rem;
+  border-radius: $global-radius;
+}
+
+#top-bar-demo-button {
+  background: transparent;
+  margin-top: 1.9rem;
+  font-weight: normal;
+  border-radius: $global-radius;
+  border: 1px solid $tertiary-color;
+}
+.top-bar-section {
+  .fa-github {
+    font-size: 1.7em;
+    position: relative;
+    top: 0.2em;
+  }
+}
+
+.top-bar.expanded {
+  background-color: black;
+}
+
+@media #{$topbar-media-query} {
+  .top-bar-section {  
+    li {
+      &.hover {
+        > a:not(.button) {
+          background-color: $topbar-link-bg-color-hover;
+          @if ($topbar-link-bg-hover) {
+            background: $topbar-link-bg-hover;
+          }
+          color: $topbar-link-color-hover;
+        }
+      }
+      &:not(.has-form) {
+        a:not(.button) {
+          padding: 0 $topbar-link-padding;
+          margin-top: 20px;
+          line-height: 60px;
+          background: $topbar-link-bg;
+          &:hover {
+            background-color: $topbar-link-bg-color-hover;
+            @if ($topbar-link-bg-hover) {
+              background: $topbar-link-bg-hover;
+            }
+          }
+        }
+      }
+      &.active:not(.has-form) {
+        a:not(.button) {
+          padding: 0 $topbar-link-padding;
+          margin-top: 20px;
+          line-height: 60px;
+          color: $topbar-link-color-active;
+          background: $topbar-link-bg-active;
+          &:hover {
+            background: $topbar-link-bg-active-hover;
+            color: $topbar-link-color-active-hover;
+          }
+        }
+      }
+    }
+  }
+}

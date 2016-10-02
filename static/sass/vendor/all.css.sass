@@ -1,0 +1,134 @@
+@import "settings"
+
+@import "../bower_components/foundation/scss/normalize"
+@import "../bower_components/foundation/scss/foundation"
+
+@import "modules/startpage"
+@import "modules/download"
+@import "modules/tsdb-list"
+@import "modules/testimonial"
+@import "modules/community"
+@import "modules/meta-topbar"
+@import "modules/topbar"
+@import "modules/page_header"
+@import "modules/page_footer"
+@import "modules/highlighting"
+@import "modules/buttons"
+@import "modules/features"
+@import "modules/blog"
+@import "vendor/blueimp-gallery.min"
+
+html
+  -webkit-font-smoothing: antialiased
+
+h1
+  margin-top: 20px
+
+.alpha
+  color: $primary-color
+  font-weight: bold
+
+.beta
+  color: $secondary-color
+  font-weight: bold
+  margin-bottom: 1.5rem
+
+.gamma
+  color: #444
+  font-weight: bold
+
+ul.title-area
+  li.name
+    img
+      margin: 26px 0 0 20px
+
+section.nav
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  z-index: 20
+  background-color: $grafana-top-nav-bg
+
+.large-button
+  background: $primary-color
+  font-size: 1.3em
+  font-weight: bold
+  border-radius: $global-radius
+  padding: 10px 45px
+  margin: 4px
+
+.splitter
+  background-position: center bottom
+  padding: 3px
+  margin-bottom: 20px 15px
+  background-repeat: no-repeat
+  background-color: #698395
+
+body
+  background-image: url(/assets/img/v2/grid_bg.png)
+  background-position: top
+  background-repeat: repeat
+
+section.main
+  margin-bottom: 100px
+
+.special
+  color: $primary-color
+  line-height: 1.2
+
+pre
+  background-color: #FCFCFC !important
+  padding: 10px
+  margin-bottom: 20px
+  border: 1px solid rgba(255, 113, 0, 0.5)
+  border-radius: 4px
+  code
+    padding: 0
+    border: none
+    background-color: transparent
+    color: #333
+    font-weight: 100
+
+.code
+  border-radius: 2px
+
+.padding-top-medium
+  padding-top: 20px
+.padding-bottom-medium
+  padding-bottom: 20px
+
+.horiz-margin-medium
+  margin-left: 20px
+  margin-right: 20px
+
+.padding-bottom-large
+  padding-bottom: 40px
+
+.panel
+  p
+    &:last-child
+      margin-bottom: 0
+
+body.blog
+  background: none
+  .main
+    section
+      h2
+        line-height: 1.2em
+        margin-bottom: 0
+
+      p#twitter
+        margin-top: 4px
+        text-align: right
+
+      ul
+        margin-left: 20px
+
+.image-shadows
+  img:not(.no-shadow)
+    box-shadow: 2px 2px 10px #666
+
+.markdown
+  p
+    margin-bottom: 0

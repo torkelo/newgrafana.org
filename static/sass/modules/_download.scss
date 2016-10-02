@@ -1,0 +1,47 @@
+.install-steps {
+  padding-bottom: rem-calc(30);
+
+  .install-step {
+    padding: 0.2rem 1.25rem;
+
+    .install-step-icon {
+      padding: rem-calc(5);
+      font-size: rem-calc(40);
+      color: $primary-color;
+    }
+  }
+}
+
+.newsletter-slim {}
+
+.download-links-wrapper {
+  margin-top: rem-calc(10);
+  margin-bottom: rem-calc(20);
+  text-align: center;
+}
+
+.download-release-heading {
+  text-align: center;
+}
+
+.download-other-ways {
+  a.button {
+    margin-right: rem-calc(15);
+    margin-bottom: rem-calc(0);
+    padding: rem-calc(10);
+  }
+}
+
+.download-release-details {
+  margin-bottom: rem-calc(40);
+}
+
+a.download-link {
+  display: inline-block;
+  font-size: 80%;
+  color: $white-text-color;
+  background-color: $secondary-color;
+  border-radius: 3px;
+  padding: rem-calc(10) rem-calc(15);
+  margin: rem-calc(10);
+}

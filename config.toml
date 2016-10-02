@@ -1,6 +1,12 @@
 baseurl = "http://grafana.org/"
 languageCode = "en-us"
 title = "Grafana"
+canonifyurls = false
+relativeURLs = true
+verbose = true
+enableRobotsTXT = true
+disableSitemap = false
+disableRSS = true
 
 [permalinks]
   blog = "blog/:year/:month/:day/:title.html/"
