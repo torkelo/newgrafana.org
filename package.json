@@ -11,13 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.3.6",
+    "babel": "^6.5.2",
+    "babel-plugin-transform-es2015-for-of": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.14.0",
+    "babel-preset-es2015": "^6.16.0",
     "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-execute": "^0.2.2",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
+    "grunt-systemjs-builder": "^0.2.7",
     "load-grunt-tasks": "^3.5.0"
   }
 }

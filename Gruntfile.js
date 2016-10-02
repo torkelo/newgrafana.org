@@ -51,7 +51,40 @@ module.exports = function(grunt) {
           keepalive: true,
         }
       }
-    }
+    },
+
+    babel: {
+      options: {
+        sourceMap: true,
+        presets:  ["es2015"],
+        plugins: ['transform-es2015-modules-systemjs', "transform-es2015-for-of"],
+      },
+      dist: {
+        files: [{
+          cwd: 'static',
+          expand: true,
+          src: ['js/**/*.js', '!js/system.conf.js'],
+          dest: 'dist',
+          ext:'.js'
+        }]
+      },
+    },
+
+    systemjs: {
+      options: {
+        sfx: true,
+        baseURL: "./dist",
+        configFile: "./dist/js/system.conf.js",
+        minify: true,
+        build: {mangle: false}
+       },
+        dist: {
+          files: [{
+          "src":  "./dist/js/app.js",
+          "dest": "./dist/js/app.min.js"
+          }]
+        }
+     }
   });
 
   grunt.registerTask('hugo', function(target) {
@@ -74,6 +107,8 @@ module.exports = function(grunt) {
     'hugo:dev',
     'sass',
     'postcss',
+    'babel',
+    'systemjs',
     ]);
 
   grunt.registerTask('build', [

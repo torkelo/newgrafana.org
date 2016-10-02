@@ -1,6 +1,6 @@
 baseurl = "http://grafana.org/"
 languageCode = "en-us"
-title = "Grafana"
+title = "Beautiful Metrics and Analytics dashboards, Data Visualization and Monitoring"
 canonifyurls = false
 relativeURLs = true
 verbose = true
