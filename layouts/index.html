@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
 
+{{ range where .Data.Pages "Title" "Beautiful Metrics and Analytics dashboards, Data Visualization and Monitoring" }}
 {{ .Content }}
+{{ end }}
 
 {{ partial "footer.html" . }}
 
