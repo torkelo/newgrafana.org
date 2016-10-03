@@ -1,7 +1,32 @@
-import '../vendor/jquery.js';
 
-console.log('ASD');
+import $ from  '../bower/jquery/dist/jquery.js';
+import blueimp from '../vendor/blueimp-gallery.js';
+import '../bower/foundation/js/foundation.js';
 
+import '../bower/lightgallery.js/dist/js/lightgallery.js';
+import '../bower/lg-thumbnail.js/dist/lg-thumbnail.js';
+import '../bower/lg-fullscreen.js/dist/lg-fullscreen.js';
+import '../bower/lg-zoom.js/dist/lg-zoom.js';
+console.log(window.lightGallery);
+
+
+$(window).on('load', () =>  {
+
+
+  $(".lightbox").each(function() {
+    lightGallery(this, {
+      thumbnail: true,
+      fullscreen: true,
+      animateThumb: true,
+    });
+  });
+
+
+});
+// $('.gallary-image').click(evt => {
+//   options = {index: this, event: evt};
+//   blueimp.Gallery($('.gallary-image'), options);
+// });
 
 
 // #= require vendor/custom.modernizr

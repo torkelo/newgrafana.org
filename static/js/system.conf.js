@@ -1,7 +1,16 @@
 System.config({
   defaultJSExtenions: true,
-  baseURL: 'js',
+  baseURL: '',
   paths: {
+  },
+
+  packages: {
+    js: {
+      defaultExtension: 'js',
+    },
+    app: {
+      defaultExtension: 'js',
+    },
   },
 
   meta: {

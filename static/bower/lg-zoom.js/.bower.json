@@ -1,0 +1,37 @@
+{
+  "name": "lg-zoom.js",
+  "version": "0.0.2",
+  "description": "Zoom module for lightgallery.",
+  "main": [
+    "dist/lg-zoom.min.js"
+  ],
+  "keywords": [
+    "gallery",
+    "lightbox",
+    "image",
+    "zoom",
+    "video"
+  ],
+  "authors": [
+    "Sachin N <sachi77n@gmail.com>"
+  ],
+  "homepage": "http://sachinchoolur.github.io/lg-zoom.js/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sachinchoolur/lg-zoom.js.git"
+  },
+  "license": "Apache-2.0",
+  "ignore": [
+    "README.md"
+  ],
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "7830314b71390832d9e6f9d710bfa0a05242468a"
+  },
+  "_source": "https://github.com/sachinchoolur/lg-zoom.js.git",
+  "_target": "^0.0.2",
+  "_originalSource": "lg-zoom.js",
+  "_direct": true
+}

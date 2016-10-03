@@ -1,12 +1,248 @@
 +++
 title       = "Grafana Features"
 description = "Grafana feature highlights and screenshots"
+body_class = "features"
 +++
 
-<div class="page-section page-section--hero">
-	<div class="wrapper">
-		<h1 class="page-section__headline">Features</h1>
+<section class="features image-shadows">
+	<div class="page-header">
+		<div class="page-header-bg"></div>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Feature Highlights</h1>
+			</div>
+		</div>
 	</div>
-</div>
-
-
+	<div class="page-content row">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Rich Graphing</h2>
+			<p>Fast and flexible client side graphs with a multitude of options.</p>
+			<ul>
+				<li>Click and select region to zoom</li>
+				<li>Multiple Y-Axes</li>
+				<li>Bars, Lines, Points</li>
+				<li>Thresholds, Logarithmic scales</li>
+				<li>Y-axis formats (bytes, milliseconds, etc)</li>
+				<li>View or edit graph in fullscreen</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns padding-top-medium">
+			{{< lightboxhelper img="docs/nice_dashboard.png" caption="Rich graphing options" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2>Graph Styling</h2>
+			<ul>
+				<li>Full control for how each series should be drawn</li>
+				<li>Mix lines, bars and points</li>
+				<li>Mix stacked series with isolated series</li>
+				<li>Export any graph to png image (via UI or HTTP API)</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns padding-top-medium">
+			{{< lightboxhelper img="blog/mixed_styles.png" caption="Flexible graph display options" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Dashboards</h2>
+			<ul>
+				<li>Drag and drop panels, change row and panel width easily.</li>
+				<li>Search dashboards based on title or tags</li>
+				<li>Templated dashboards</li>
+				<li>Scripted dashboards</li>
+				<li>Dashboard playlists</li>
+				<li>Create / Update HTTP API</li>
+				<li>Different panel types</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns padding-top-medium">
+			{{< lightboxhelper img="features/dashboard_ex1.png" caption="Dashboard layout example with singletat and graph panels" >}}
+		</div>
+	</div>
+	<div class="testimonial-wrapper red">
+		<div class="row">
+			<div class="medium-12 columns">
+				<div class="testimonial">
+					<p>At NS1, Grafana enables us to drill deeply into huge volumes of real-time network and infrastructure telemetry, about hundreds of systems spanning dozens of datacenters in our global DNS &amp; traffic management network.  We live and breathe data and rely on Grafana to bring it to life.</p>
+					<p class="source">– Kristopher Beevers, CEO, NS1</p>
+					<p class="source"><img class="no-shadow" src="/assets/img/logo-nsone.svg" width="100"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2 id="graphite">Graphite Support</h2>
+			<p>Grafana includes a built in Graphite query parser that takes writing graphite metric expressions to a whole new level. Expressions are easier to read and faster to edit than ever.</p>
+			<ul>
+				<li>Click on any metric segment to change it</li>
+				<li>Quickly add functions (search, typeahead)</li>
+				<li>Click on a function parameter to change it</li>
+				<li>Move function order to the left or right</li>
+				<li>Direct link to Graphite function documentation</li>
+				<li>Rich templating support</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="graphite/editor.png" caption="Feature Rich Graphite Query Builder" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2 id="elasticsearch">Elasticsearch Support</h2>
+			<ul>
+				<li>Rich query editor with automatic property name lookup</li>
+				<li>Extract many types of metrics from documents like: Avg, Min, Max, Percentiles, Std Dev, etc.</li>
+				<li>Group by multiple terms or filters</li>
+				<li>Query only relevant indicies based on time pattern</li>
+				<li>Alias patterns for short readable series names</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns"><a class="gallary-image" data-gallery="1" href="/assets/img/features/elasticsearch_metrics_ex1.png" title="Elasticsearch example"><img alt="Elasticsearch example" src="/assets/img/features/elasticsearch_metrics_ex1.png"></a></div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2>Template Variables</h2>
+			<p>Define template variables that can be filled with values dynamically from your time series store. Use these variables in your metric queries to create generic and reusable dashboards.</p>
+			<ul>
+				<li>Use variables in metric queries</li>
+				<li>Use variables in panel titles</li>
+				<li>Use variables in function parameters</li>
+				<li>Set variable values via URL</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/templating_ex1.png" caption="Templating enabled dynamic dashboards" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Repeat Panels or Rows</h2>
+			<p>Use any panel or row as a template and make Grafana repeat it for each selected value in a template variable.</p>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/repeating_panels.png" caption="Reapting Panels Example" >}}
+	</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2>Sharing</h2>
+			<ul>
+				<li>Share link to dashboard or fullscreen panel</li>
+				<li>Automatically includes current time range and variables.</li>
+				<li>Create a public or internal snapshot</li>
+				<li>Server side render API makes chat integration possible</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/sharing.png" caption="Multiple ways to share data visualizations" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Authentication Options</h2>
+			<img class="no-shadow pull-right" src="/assets/img/icn_auth.svg" width="100">
+			<ul>
+				<li>User / Password</li>
+				<li>Google OAuth</li>
+				<li>Github OAuth</li>
+				<li>LDAP integration</li>
+				<li>Auth proxy support</li>
+				<li>Basic Auth &amp; API Key Auth</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns feature-highlight">
+			<h2>Multi-tenant: Orgs &amp; Users</h2>
+			<i class="fa fa-users pull-right" style="font-size: 5em; padding-top: 0.1em; color: #444444"></i>
+			<p>Grafana supports multi tenancy. Setup multiple organizations that each can have their own admins, define their own data sources, dashboards and users.</p>
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2 id="influxdb">InfluxDB Support</h2>
+			<ul>
+				<li>Rich editor with measurement, tag and tag value completion</li>
+				<li>Automatic handling of group by time</li>
+				<li>Templating queries for generic dashboards</li>
+				<li>Alias patterns for short readable series names</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="influxdb/editor.png" caption="Feature rich InfluxDB Query Builder with auto complete" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2>Annotations</h2>
+			<p>Annotate graphs with rich events from different data sources. Hover over events shows you the full event metadata and tags.</p>
+			<ul>
+				<li>Fetch annotations from Elasticsearch</li>
+				<li>Fetch annotations from Graphite Events and Metrics</li>
+				<li>Fetch annotations from InfluxDB</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="annotated_graph2.png" caption="Annotate graphs with events from multiple data sources" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Dark and Light theme</h2>
+			<p>If you do not prefer the default dark theme you can switch to a light theme.This is an user preference that can be changed on the profile page.</p>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/light_theme.png" caption="Light theme" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2 id="plugins">Many data sources &amp; plugins</h2>
+			<p>All data sources in Grafana are using the same data source plugin API. Many are officially supported and included in the standard releases. Some require manual installation.</p>
+			<ul>
+				<li>Add how many data sources you want</li>
+				<li>Mix different data sources on the same dashboard</li>
+				<li>Mix different data sources in the same graph (only in v2.5)</li>
+				<li>Add custom data sources</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/mixed_data.png" caption="Mix data sources on the same dashboard or in the same graph!" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight">
+			<h2>Quick time range selection</h2>
+			<ul>
+				<li>Time range dropdown with quick ranges</li>
+				<li>Supports local and UTC time</li>
+				<li>Auto refresh intervals</li>
+				<li>
+					Complex date ranges like
+					<ul>
+						<li>Yesterday</li>
+						<li>The day so far</li>
+						<li>This day last week</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/timepicker.png" caption="Flexible time range selection" >}}
+		</div>
+	</div>
+	<div class="row padding-bottom-medium padding-top-medium">
+		<div class="medium-6 columns feature-highlight right">
+			<h2 id="cloudwatch">Cloudwatch Support</h2>
+			<ul>
+				<li>Rich editor with auto completion for metric names, namespaces and dimensions</li>
+				<li>Templating queries for generic dashboards</li>
+				<li>Alias patterns for short readable series names</li>
+			</ul>
+		</div>
+		<div class="medium-6 columns">
+			{{< lightboxhelper img="features/cloudwatch.png" caption="Cloudwatch query builder" >}}
+		</div>
+	</div>
+</section>

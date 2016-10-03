@@ -2,6 +2,8 @@
 
 @import "../bower/foundation/scss/normalize.scss";
 @import "../bower/foundation/scss/foundation.scss";
+@import "../bower/lightgallery.js/dist/css/lightgallery.css";
+@import "../bower/lightgallery.js/dist/css/lg-transitions.css";
 
 @import "modules/startpage";
 @import "modules/download";
@@ -15,7 +17,8 @@
 @import "modules/buttons";
 @import "modules/features";
 @import "modules/blog";
-@import "vendor/blueimp-gallery.min";
+@import "modules/lightbox";
+
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -157,11 +160,11 @@ body.blog {
   }
 }
 
-.image-shadows {
-  img:not(.no-shadow) {
-    box-shadow: 2px 2px 10px #666;
-  }
-}
+// .image-shadows {
+//   img:not(.no-shadow) {
+//     box-shadow: 2px 2px 10px #666;
+//   }
+// }
 
 .markdown {
   p {

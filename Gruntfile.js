@@ -89,22 +89,6 @@ module.exports = function(grunt) {
       },
     },
 
-    systemjs: {
-      options: {
-        sfx: true,
-        baseURL: "./dist",
-        configFile: "./dist/js/system.conf.js",
-        minify: false,
-        build: {mangle: false}
-      },
-      dist: {
-        files: [{
-          "src":  "./dist/js/app.js",
-          "dest": "./dist/js/app.min.js"
-        }]
-      }
-    },
-
     cssmin: {
       build: {
         expand: true,
@@ -135,8 +119,12 @@ module.exports = function(grunt) {
     filerev: {
       options: {encoding: "utf8", algorithm: "md5", length: 8},
       js: {
-        src: "dist/js/app.js",
+        src: "dist/js/app.bundle.js",
         dest: "dist/js",
+      },
+      css: {
+        src: "dist/css/styles.css",
+        dest: "dist/css",
       }
     }
 
@@ -155,6 +143,28 @@ module.exports = function(grunt) {
     hugo = require("child_process").spawn("hugo", args, {stdio: "inherit"});
     hugo.on("exit", function() { done(true); });
     hugo.on("error", function() { done(true); });
+  });
+
+  grunt.registerTask('systemjs', function() {
+    var Builder = require('systemjs-builder');
+    var done = this.async();
+
+    // optional constructor options
+    // sets the baseURL and loads the configuration file
+    var builder = new Builder('dist', 'dist/js/system.conf.js');
+    console.log('Starting systemjs-builder');
+
+    builder
+      .buildStatic('js/app.js', 'dist/js/app.bundle.js')
+      .then(function() {
+        console.log('Build complete');
+        done();
+      })
+    .catch(function(err) {
+      console.log('Build error');
+      console.log(err);
+      done(false);
+    });
   });
 
   grunt.registerTask("default", [

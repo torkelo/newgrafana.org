@@ -23,8 +23,10 @@
     "grunt-execute": "^0.2.2",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
-    "grunt-systemjs-builder": "^0.2.7",
-    "load-grunt-tasks": "^3.5.0"
+    "lg-thumbnail.js": "0.0.4",
+    "load-grunt-tasks": "^3.5.0",
+    "systemjs": "^0.19.39",
+    "systemjs-builder": "^0.15.32"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.0",

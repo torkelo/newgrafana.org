@@ -24,31 +24,23 @@
 		<meta property="og:title" content="{{ .Title }}" />
 		<meta property="og:image" content="http://grafana.org/assets/img/logo_new_transparent_200x48.png" />
 
+		<!-- build:css css/styles.js -->
 		<link href="/css/styles.css" rel="stylesheet">
+		<!-- endbuild -->
+
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 
 		<meta name="Copyright" content="Raintank Inc." />
 
-		<!-- build:js js/app.js -->
-		<script src="js/app.js" defer></script>
+		<!-- build:js js/app.bundle.js -->
+		<script src="/js/app.bundle.js" defer></script>
 		<!-- endbuild -->
 	</head>
-	<body>
 
-		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-			<div class="slides"></div>
-			<h3 class="title"></h3>
-			<a class="prev">‹</a>
-			<a class="next">›</a>
-			<a class="close">×</a>
-			<a class="play-pause"></a>
-			<ol class="indicator"></ol>
-		</div>
+	<body class="{{ if .Params.body_class }}{{ .Params.body_class }}{{ end }}">
 
-		<div id="content">
-			<div class="page">
-				{{ partial "navbar.html" . }}
+		{{ partial "navbar.html" . }}
 
 				<!--   title == "Grafana &#45; " + (data.page.title || "Beautiful Metrics, Analytics, dashboards and monitoring!") -->
 				<!--  -->

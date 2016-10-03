@@ -1,0 +1,37 @@
+{
+  "name": "lg-thumbnail.js",
+  "version": "0.0.4",
+  "description": "Thumbnail module for lightgallery.",
+  "main": [
+    "dist/lg-thumbnail.min.js"
+  ],
+  "keywords": [
+    "gallery",
+    "lightbox",
+    "image",
+    "thumbnail",
+    "video"
+  ],
+  "authors": [
+    "Sachin N <sachi77n@gmail.com>"
+  ],
+  "homepage": "http://sachinchoolur.github.io/lg-thumbnail.js/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sachinchoolur/lg-thumbnail.js.git"
+  },
+  "license": "Apache-2.0",
+  "ignore": [
+    "README.md"
+  ],
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.4",
+    "commit": "66e9811346f103e1960222c0bbb1f70a6f231b43"
+  },
+  "_source": "https://github.com/sachinchoolur/lg-thumbnail.js.git",
+  "_target": "^0.0.4",
+  "_originalSource": "lg-thumbnail.js",
+  "_direct": true
+}
